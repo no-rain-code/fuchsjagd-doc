@@ -1,0 +1,19 @@
+PhoneGap
+PhoneGap bietet eine Applikationsplatform auf HTML 5 und CSS 3 Basis. Der Vorteil ist, das die nativen APIs mittels HTML und JavaScript implementiert werden können und dann je nach darunterliegendem Gerät angesprochen werden. Dadurch ist die Codebase der Applikation für alle Geräte die gleiche. Sie wird dann noch in eine standardmässige, geräte- und versionsspezifische Umgebung eingehängt und so auf den Smartphones installiert.
+
+PhoneGap Android
+Der einfachste Einstieg in die App Entwicklung mit PhoneGap ist mittels Eclipse. Unter anderem weil es für die anderen IDEs nicht einfach ist Dokumentation mit PhoneGap zu finden. Nachdem Eclipse mit dem Android SDK Plugin ausgestattet worden ist, kann man ein einfaches Android Projekt öffnen, welches ein erstes "Hello World" setup im Standard Native Android Style enthält. 
+An diesem Standard Projekt muss man nun eine Hand voll Änderungen vornehmen bis man mit der eigentlich Programmierung anfangen kann: 
+- Die phonegap.jar Java Archiv Datei muss in den Ordner für anzuziehende Archive kopiert werden.
+- Zwei XML Dateien mit Konfiguration müssen in den Ressourcen Ordner kopiert werden. 
+- In der Standard "Activity", einem Baustein einer Nativen Android Applikation, welche bei der Projekt generation mit generiert wurde, muss der standardmässige setContentView() Aufruf mit dem Laden der initialen html Datei ersetzt werden.
+- Ausserdem müssen im Standard AndroidManifest.xml Einträge wie Permissions, welche die Applikation auf die Features des Android Phones hat, und eine zusätzliche "Activity" konfiguriert werden.
+- Als letztes braucht es noch die phonegap.js Datei, welche in den www Ordner kopiert wird, in welchem dann auch die Applikation oder Web-Content, hinkommt.
+Das Setup kann mit einem einfachen "Hello World"-html im www Ordner überprüft werden. Mit der Run... Taste und dem neuen Aufsetzten einer "Android Applikaton" wird die "Hello World" Seite einfach auf dem Android-Phone oder dem Android Emulator angezeigt.
+
+Zugriff auf ein richtiges Android Phone
+Der Zugriff von Eclipse oder anderen IDEs auf ein Android Phone ist sehr einfach. Dazu muss lediglich in den Einstellungen auf dem Gerät unter Applikationen das Debug-Flag einschalten. Danach das Telefon mit dem USB Kabel an den Computer anhängen und beim laufen lassen einer Applikation erscheint es dann zur Auswahl in der Liste. Die Applikation wird dann deployed und installiert, und ist danach auch ohne Verbindung zum Computer verfügbar.
+
+Emulatoren
+Die Emulatoren, welche das Android SDK zu Verfügung stellt sind für einfache "Hello World" Appliktionen mehr als passable. Die Geschwindigkeit lässt jedoch schon beim Aufstarten von einem MacBook zu wünschen übrig. Der Angezeigte Android Desktop ruckelt und es dauert lange bis Klicks beantwortet werden. Wenn Andoid Native Features wie Geolocation oder der Kompass angesprochen werden sollen, muss dies zuerst kompliziert konfiugriert werden, wie es vielen Foren im Internet zu entnehmen ist. HTML5 und JavaScript funktionieren. Somit können die Emulatoren für einfache Regression Tests nützlich sein. Bei komplexeren Applikationen sollte man für das Programmieren jedoch ein richtiges Android Phone zur Verfügung haben wo man die Tests schnell und einfach darauf deployen und testen kann.
+
