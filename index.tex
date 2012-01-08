@@ -1,0 +1,65 @@
+\documentclass[a4paper,twoside,10pt]{article}
+\usepackage{listings}
+
+%
+%  Created by Marc Egli on 2011-12-19.
+%  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+%
+%
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx} %%Grafiken in pdfLaTeX
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{fancyhdr} %%Fancy Kopf- und Fußzeilen
+
+\usepackage[pdftitle={Fuchsjagd},%
+						pdfauthor={Marc Egli, Tarik Azarn Ait Oulmouloud},%
+						pdfcreator={TextMate2},
+						pdfsubject={Seminararbeit Mobile Applications},
+						plainpages=false,
+						pdfpagelabels,
+						colorlinks,
+						linkcolor=black,
+						filecolor=black,
+						citecolor=black]{hyperref}
+
+
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%\pdffalse % we are not running PDFLaTeX
+%\else
+%\pdfoutput=1 % we are running PDFLaTeX
+%\pdftrue
+%\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+
+\begin{document}
+\pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
+\input{chapters/frontpage.tex}
+
+\pagestyle{fancy} %%Ab hier die Kopf-/Fusszeilen: headings / fancy / ...
+\newpage
+\tableofcontents
+\newpage
+
+\input{chapters/abstract.tex}
+\input{chapters/backend.tex}
+\input{chapters/fazit.tex}
+
+\end{document}
+

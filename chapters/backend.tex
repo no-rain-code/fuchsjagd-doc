@@ -1,0 +1,47 @@
+\newpage
+\section{Server} % (fold)
+\label{sec:Server}
+
+\subsection{Einleitung} % (fold)
+\label{sub:Einleitung}
+Um einen OL einfach durch einen neuen zu ersetzen, wird ein zentraler Webserver verwendet. Das sogenannte Backend vereifacht die Erstellung von OL indem es ermöglicht solche über ein Webformular einzutragen.
+% subsection Einleitung (end)
+
+\subsection{Technologie} % (fold)
+\label{sub:Technologie}
+Da das Backend nicht zentraler Bestandteil dieser Arbeit ist, wurde hier auf schon vorhandene Kenntnisse der Programmiersprache Python und auf Erfahrungen mit dem Django Framework aufgebaut.\\
+Django ist ein weit verbreitetes Webframework, welches sich zusammen mit Piston gut für ein solches Projekt eignet.
+% subsection Technologie (end)
+
+\subsection{Hosting Evaluation} % (fold)
+\label{sub:Hosting Evaluation}
+Da Django Applikationen nicht auf jedem Webserver ohne weiteres lauffähig sind, und ein kostenarmer Betrieb auch nach dem Abschliessen dieser Arbeit erzielt werden soll, wurden hier die Bestehenden Applikationshoster ins Auge gefasst.
+
+\subsubsection{Google App Engine} % (fold)
+\label{ssub:Google App Engine}
+Google betreibt mit der App Engine einen Dienst welche sehr gut Skalierbar ist und für kleine Datenaufkommen auch gratis ist.\\
+Jedoch unterstützte die App Engine zu Beginn dieser Arbeit noch keine Relationale Datenbank, was den Programmieraufwand betrachtlich erhöht hätte.
+% subsubsection Google App Engnine (end)
+
+\subsubsection{Heroku} % (fold)
+\label{ssub:Heroku}
+Heroku ist vor allem durch seinen Rails Hosting Service bekannt geworen. Jedoch ist es nun auch möglich diverse andere Frameworks und Sprachen über eigene Scripte einzubinden. Jedoch war dies zu Beginn dieser Arbeit noch nicht so ausgereift und basierte teilweise auf nicht für produktiv Umgebungen konzipierten Anwendungen.
+% subsubsection Heroku (end)
+
+\subsubsection{Djangy} % (fold)
+\label{ssub:Djangy}
+Dieser vielversprechende Service wurde leider kurz vor dieser Arbeit eingestellt, da die Betreiber sich dagegen entschieden haben, Geld aufzunehmen um schneller wachsen zu können.
+% subsubsection Djangy (end)
+
+\subsection{ep.io} % (fold)
+\label{sub:ep.io}
+ep.io ist seit langer Zeit in der Beta Phase und ist nur mit einer persönlichen Einladung nutzbar, jedoch lässt sich ep.io gut mit dem oben aufgeführten Djangy Service Vergleichen. Ein weiterer Vorteil gegenüber App Engine und Heroku ist, dass sich ep.io auf Django Hosting und nicht Web Applikationen im Allgemeinen spezialisiert hat.
+% subsection ep.io (end)
+
+% subsection Hosting Evaluation (end)
+
+\subsection{Hosting Entscheidung} % (fold)
+\label{sub:Hosting Entscheidung}
+Da Marc Egli nach über einem halben Jahr wartezeit noch rechtzeitig als Tester von ep.io zugelassen wurde und ep.io für unsere Zwecke gratis ist, haben wir uns dafür entschieden ep.io zu auszuprobieren.
+% subsection Hosting Entscheidung (end)
+% section Server (end)
