@@ -10,3 +10,4 @@
 *.ind
 *.bbl
 *.blg
+.DS_Store
