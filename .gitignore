@@ -6,3 +6,5 @@
 *.out
 *.toc
 *.lof
+*.ilg
+*.ind
