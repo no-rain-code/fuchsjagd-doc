@@ -1,6 +1,10 @@
 PhoneGap
 PhoneGap bietet eine Applikationsplatform auf HTML 5 und CSS 3 Basis. Der Vorteil ist, das die nativen APIs mittels HTML und JavaScript implementiert werden können und dann je nach darunterliegendem Gerät angesprochen werden. Dadurch ist die Codebase der Applikation für alle Geräte die gleiche. Sie wird dann noch in eine standardmässige, geräte- und versionsspezifische Umgebung eingehängt und so auf den Smartphones installiert.
 
+PhoneGap Programmierung 
+
+
+
 PhoneGap Android
 Der einfachste Einstieg in die App Entwicklung mit PhoneGap ist mittels Eclipse. Unter anderem weil es für die anderen IDEs nicht einfach ist Dokumentation mit PhoneGap zu finden. Nachdem Eclipse mit dem Android SDK Plugin ausgestattet worden ist, kann man ein einfaches Android Projekt öffnen, welches ein erstes "Hello World" setup im Standard Native Android Style enthält. 
 An diesem Standard Projekt muss man nun eine Hand voll Änderungen vornehmen bis man mit der eigentlich Programmierung anfangen kann: 
@@ -14,6 +18,8 @@ Das Setup kann mit einem einfachen "Hello World"-html im www Ordner überprüft 
 Zugriff auf ein richtiges Android Phone
 Der Zugriff von Eclipse oder anderen IDEs auf ein Android Phone ist sehr einfach. Dazu muss lediglich in den Einstellungen auf dem Gerät unter Applikationen das Debug-Flag einschalten. Danach das Telefon mit dem USB Kabel an den Computer anhängen und beim laufen lassen einer Applikation erscheint es dann zur Auswahl in der Liste. Die Applikation wird dann deployed und installiert, und ist danach auch ohne Verbindung zum Computer verfügbar.
 
-Emulatoren
+Android Emulatoren
 Die Emulatoren, welche das Android SDK zu Verfügung stellt sind für einfache "Hello World" Appliktionen mehr als passable. Die Geschwindigkeit lässt jedoch schon beim Aufstarten von einem MacBook zu wünschen übrig. Der Angezeigte Android Desktop ruckelt und es dauert lange bis Klicks beantwortet werden. Wenn Andoid Native Features wie Geolocation oder der Kompass angesprochen werden sollen, muss dies zuerst kompliziert konfiugriert werden, wie es vielen Foren im Internet zu entnehmen ist. HTML5 und JavaScript funktionieren. Somit können die Emulatoren für einfache Regression Tests nützlich sein. Bei komplexeren Applikationen sollte man für das Programmieren jedoch ein richtiges Android Phone zur Verfügung haben wo man die Tests schnell und einfach darauf deployen und testen kann.
 
+Debuggen mit Eclipse
+Bei angehängtem Android Phone, können alle Aktivitäten im Eclipse angezeigt werden. Java Code könnte auch genau gedebugged werden. Leider können HTML und Java Script nicht gedebugged werden. Die Debug-View zeigt jedoch die Fehler wie einem Browser jedoch in chronologischem Ablauf zusammen mit den Warnings und Infos vom Phone (Klicks, Laden, etc). Somit kann dies dennoch hilfreich sein. 
