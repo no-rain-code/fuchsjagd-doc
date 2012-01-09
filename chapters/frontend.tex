@@ -15,7 +15,7 @@ Zur Zeit ist in der Schweiz das iPhone das meistverkaufte Smartphone. Dies und d
 
 \subsection{Geolocation Navtive Feature} % (fold)
 \label{sub:geolocation_native_feature}
-Von Geolocation Native Funktion werden zwei PhoneGap Methoden verwendet. Initial wird getCurrentPosition verwendet um die aktuelle Position festzustellen. Danach werden mit watchPostion Veränderungen festgestellt und abgespeichert. Die Ankunft von neuen Geolocation Daten löst immer direkt eine Berechnung der Abstände und Richtungen zu den Zielen aus.
+Von Geolocation Native Funktion werden zwei PhoneGap Methoden verwendet. Initial wird getCurrentPosition verwendet um die aktuelle Position festzustellen. Danach werden mit watchPostion Veränderungen festgestellt und abgespeichert. Die Ankunft von neuen Geolocation Daten löst immer direkt eine Berechnung der Abstände und Richtungen zu den Zielen aus. Der Wert den die Methoden zurückliefern ist die Gradangabe unterschiedlich von Nord. Daher ist Ost 90, Süd 180 und West 270.
 % subsection geolocation_native_feature (end)
 
 \subsection{Kompass Native Feature} % (fold)
@@ -25,7 +25,18 @@ Von der Kompass Native Funktion werden zwei PhoneGap Methoden verwendet. Mit get
 
 \subsection{Kalculations} % (fold)
 \label{sub:kalculations}
+\subsubsection{Richtung} % (fold)
+\label{ssub:richtung}
 
+% subsubsection richtung (end)
+\subsubsection{Signalstärke} % (fold)
+\label{ssub:signalstärke}
+Die Signalstärke wird angezeigt, wenn die eigene Richtung näher wie 100 Grad an der Richtung des Ziels ist. In einer ersten Implementation wurde die Stärke linear berechnet. Daher: Wenn die Richtung um 99 Grad daneben war wurde 1\% Signalstärke angezeigt, bei 50 Grad waren es 50\% Signalstärke.
+% subsubsection signalstärke (end)
+\subsubsection{Distantz} % (fold)
+\label{ssub:distantz}
+Die Distanz wird mit einer Hypotenuse zwischen den beiden Punkten (Eigene Position und Ziel) mit den Deltas der Längen- und Höhenbreite berechnet. 
+% subsubsection distantz (end)
 % subsection kalculations (end)
 
 \subsection{Backend Kommunikation} % (fold)
