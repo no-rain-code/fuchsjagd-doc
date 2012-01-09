@@ -4,3 +4,5 @@
 *.pdf
 *.synctex.gz
 *.out
+*.toc
+*.lof
