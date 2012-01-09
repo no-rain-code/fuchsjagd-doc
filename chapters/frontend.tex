@@ -6,6 +6,62 @@
 
 \subsection{Evaluation Toolkit} % (fold)
 \label{sub:Evaluation Toolkit}
-Zur Zeit ist in der Schweiz das iPhone das Meistverkaufte Smartphone. Dies und der App Store von Apple sind Gründe, wesswegen viele Unternemen ihre Mobileapplikationen erst für das iPhone entwickeln. Zur Zeit wächst jedoch der Android Markt sehr schnell und wird das iPhone warscheinlich vom ersten Platz verdrängen. Das Entwickeln einer App für Android ist jedoch in einigen Punkten komplexer als es für das iPhone ist, da die Diversität der Geräte massiv höher ist und kaum ein Gerät auf einen Relevanten Marktanteil kommt.
+Zur Zeit ist in der Schweiz das iPhone das meistverkaufte Smartphone. Dies und der App Store von Apple sind Gründe, wesswegen viele Unternehmen ihre Mobileapplikationen erst für das iPhone entwickeln. Zur Zeit wächst jedoch der Android Markt sehr schnell und wird das iPhone wahrscheinlich vom ersten Platz verdrängen. Das Entwickeln einer App für Android ist jedoch in einigen Punkten komplexer als es für das iPhone ist, da die Diversität der Geräte massiv höher ist und kaum ein Gerät auf einen Relevanten Marktanteil kommt.
 % subsection Evaluation Toolkit (end)
 % section Mobile Applikation (end)
+
+\section{Entwicklung Frontend} % (fold)
+\label{sec:entwicklung_frontend}
+
+\subsection{Geolocation Navtive Feature} % (fold)
+\label{sub:geolocation_native_feature}
+Von Geolocation Native Funktion werden zwei PhoneGap Methoden verwendet. Initial wird getCurrentPosition verwendet um die aktuelle Position festzustellen. Danach werden mit watchPostion Veränderungen festgestellt und abgespeichert. Die Ankunft von neuen Geolocation Daten löst immer direkt eine Berechnung der Abstände und Richtungen zu den Zielen aus. Der Wert den die Methoden zurückliefern ist die Gradangabe unterschiedlich von Nord. Daher ist Ost 90, Süd 180 und West 270.
+% subsection geolocation_native_feature (end)
+
+\subsection{Kompass Native Feature} % (fold)
+\label{sub:kompass_native_feature}
+Von der Kompass Native Funktion werden zwei PhoneGap Methoden verwendet. Mit getCurrentHeading wird die initiale Richtung festgestellt. Weiter wird mit watchHeading die Ausrichtung aktualisiert. Die Aktualisierung funktioniert in zeitlich bestimmten Abständen. Die Messungen sollten unter 500 Millisekunden sein um eine flüssige Applikation zu haben. Es ist jedoch darauf zu achten, das die Verarbeitungszeit nicht unterschritten wird, damit man nicht in Probleme mit zu vielen Verarbeitungen hinein läuft. Ein Update der Kompass-Daten löst immer eine Kalkulation der Signal-Stärke aus, welche im Zusammenhang mit der Richtung des Ziels (siehe Kapitel  Section~\ref{sub:geolocation_native_feature}) und eingehenden Kompass-Richtung steht.
+% subsection kompass_native_feature (end)
+
+\subsection{Kalculations} % (fold)
+\label{sub:kalculations}
+\subsubsection{Richtung} % (fold)
+\label{ssub:richtung}
+
+% subsubsection richtung (end)
+\subsubsection{Signalstärke} % (fold)
+\label{ssub:signalstärke}
+Die Signalstärke wird angezeigt, wenn die eigene Richtung näher wie 100 Grad an der Richtung des Ziels ist. In einer ersten Implementation wurde die Stärke linear berechnet. Daher: Wenn die Richtung um 99 Grad daneben war wurde 1\% Signalstärke angezeigt, bei 50 Grad waren es 50\% Signalstärke.
+% subsubsection signalstärke (end)
+\subsubsection{Distantz} % (fold)
+\label{ssub:distantz}
+Die Distanz wird mit einer Hypotenuse zwischen den beiden Punkten (Eigene Position und Ziel) mit den Deltas der Längen- und Höhenbreite berechnet. 
+% subsubsection distantz (end)
+% subsection kalculations (end)
+
+\subsection{Backend Kommunikation} % (fold)
+\label{sub:backend_kommunikation}
+
+% subsection backend_kommunikation (end)
+
+\subsection{Stärkenanzeige} % (fold)
+\label{sub:stärkenanzeige}
+
+% subsection stärkenanzeige (end)
+
+\subsection{Datenmanagement} % (fold)
+\label{sub:datenmanagement}
+
+% subsection datenmanagement (end)
+
+\subsection{Mini-Kompass} % (fold)
+\label{sub:mini_kompass}
+
+% subsection mini_kompass (end)
+
+\subsection{Design} % (fold)
+\label{sub:design}
+
+% subsection design (end)
+
+% section entwicklung_frontend (end)
