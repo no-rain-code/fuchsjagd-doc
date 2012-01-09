@@ -19,6 +19,13 @@ An diesem Standard Projekt muss man nun eine Hand voll Änderungen vornehmen bis
 \end{itemize}
 Das Setup kann mit einem einfachen "`Hello World"'-html im www Ordner überprüft werden. Mit der Run... Taste und dem neuen Aufsetzten einer "`Android Applikaton"' wird die "`Hello World"' Seite einfach auf dem Android-Phone oder dem Android Emulator angezeigt.
 
+\begin{figure}[H]
+	\centering			      
+        \includegraphics[width=14cm]{images/eclipse-shot.png}\\
+		\caption{Entwicklungsumgebung Eclipse}
+	\label{fig:eclipse-project}
+\end{figure}
+
 \subsubsection{Zugriff auf ein richtiges Android Phone} % (fold)
 \label{ssub:Zugriff auf ein richtiges Android Phone}
 Der Zugriff von Eclipse oder anderen IDEs auf ein Android Phone ist sehr einfach. Dazu muss lediglich in den Einstellungen auf dem Gerät unter Applikationen das Debug-Flag einschalten. Danach das Telefon mit dem USB Kabel an den Computer anhängen und beim laufen lassen einer Applikation erscheint es dann zur Auswahl in der Liste. Die Applikation wird dann deployed und installiert, und ist danach auch ohne Verbindung zum Computer verfügbar.
@@ -36,8 +43,9 @@ Bei angehängtem Android Phone, können alle Aktivitäten im Eclipse angezeigt w
 
 \subsubsection{Probleme mit Android} % (fold)
 \label{ssub:probleme_mit_android}
-
-% subsubsection probleme_mit_android (end)
+Initial hat der Setup eines einfachen PhoneGap "`Hello World"' Beispiels Schwierigkeiten bereiten, da es mit einer alternativen IDE versucht wurde. Für PhoneGap gibt es jedoch "`Getting-Started"'-Dokumentation nur mit Eclipse. Diese ist für jemanden, der noch nie mit Android SDK oder PhoneGap programmiert hat essentiell. \\
+Weiter wurden die nativen Features Geolocation und vorallem Kompass lange einfach nicht angezeigt ohne eine Fehlermeldung zu liefern. Nach diversen "`Try and Error"' Versuchen mit Neuaufsetzten des Eclipse Android Projektes und sauberem Konfigurieren der eigentlich simplen Setup Schritten sind die Features dann gelaufen. 
+% subsubsection Probleme mit Android (end)
 
 % subsection Android (end)
 
