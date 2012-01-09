@@ -23,8 +23,8 @@ Von Geolocation Native Funktion werden zwei PhoneGap Methoden verwendet. Initial
 Von der Kompass Native Funktion werden zwei PhoneGap Methoden verwendet. Mit getCurrentHeading wird die initiale Richtung festgestellt. Weiter wird mit watchHeading die Ausrichtung aktualisiert. Die Aktualisierung funktioniert in zeitlich bestimmten Abständen. Die Messungen sollten unter 500 Millisekunden sein um eine flüssige Applikation zu haben. Es ist jedoch darauf zu achten, das die Verarbeitungszeit nicht unterschritten wird, damit man nicht in Probleme mit zu vielen Verarbeitungen hinein läuft. Ein Update der Kompass-Daten löst immer eine Kalkulation der Signal-Stärke aus, welche im Zusammenhang mit der Richtung des Ziels (siehe Kapitel~\ref{sub:geolocation_native_feature}) und eingehenden Kompass-Richtung steht.
 % subsection kompass_native_feature (end)
 
-\subsection{Kalculations} % (fold)
-\label{sub:kalculations}
+\subsection{Kalkulation} % (fold)
+\label{sub:kalkulation}
 \subsubsection{Richtung} % (fold)
 \label{ssub:richtung}
 Die Richtung wird mittels dem Öffnungswinkel zwischen den zwei Punkten berechnet und in Abhängigkeit zu Nord gebracht. So erhält man eine Richtung wie es die Kompass Native Funktion zurück liefert. Diese können dann direkt verglichen werden um die Korrektheit der Richtung und somit die Signalstärke ~\ref{ssub:signalstärke}
@@ -38,7 +38,7 @@ Die Signalstärke wird angezeigt, wenn die eigene Richtung näher wie 100 Grad a
 \label{ssub:distantz}
 Die Distanz wird mit einer Hypotenuse zwischen den beiden Punkten (Eigene Position und Ziel) mit den Deltas der Längen- und Höhenbreite berechnet. 
 % subsubsection distantz (end)
-% subsection kalculations (end)
+% subsection kalkulation (end)
 
 \subsection{Backend Kommunikation} % (fold)
 \label{sub:backend_kommunikation}
@@ -47,7 +47,7 @@ Die Backend Kommunikation wurde längere Zeit mit statischen Zielen simuliert. S
 
 \subsection{Stärkenanzeige} % (fold)
 \label{sub:stärkenanzeige}
-Für die Anzeige der Signalstärke für x Ziele wurde dynamisches HTML verwendet, was grundsätzlich keine schöne Lösung ist. Dabei werden mittels Java Script HTML Tags nach dem Laden für jedes gefundene Ziel ein HTML-Div in einen schon vorhandenen div eingebunden. Dabei erhält jeder der Divs eine individuelle dem Ziel angepasste ID damit die Singalstärke bei Änderungen angepasst werden können. Die Signalstärke wird von der Kalkulation in Prozent geliefert. Diese Prozentzahl kann dann direkt im HTML Signalstärke Tag width eingegeben werden, das die prozentuale Grösse vom darum liegenden Tag annimmt.
+Für die Anzeige der Signalstärke für x Ziele wurde dynamisches HTML verwendet, was grundsätzlich keine schöne Lösung ist. Dabei werden mittels Java Script HTML Tags nach dem Laden für jedes gefundene Ziel ein HTML-Div in einen schon vorhandenen div eingebunden. Dabei erhält jeder der Divs eine individuelle dem Ziel angepasste ID damit die Signalstärke bei Änderungen angepasst werden können. Die Signalstärke wird von der Kalkulation in Prozent geliefert. Diese Prozentzahl kann dann direkt im HTML Signalstärke Tag width eingegeben werden, das die prozentuale Grösse vom darum liegenden Tag annimmt.
 % subsection stärkenanzeige (end)
 
 \subsection{Datenmanagement} % (fold)
@@ -55,14 +55,15 @@ Für die Anzeige der Signalstärke für x Ziele wurde dynamisches HTML verwendet
 Um die Daten der Ziele zu managen, wurde Objekt Orientiertes Java Script verwendet. Ein Ziel besitzt einen Namen, eine fixe Position, welche vom Backend geliefert wird, eine veränderliche Richtung und Entfernung. Zusätzlich besitzt das Objekt zwei Methoden. Die erste wird aufgerufen, wenn sich die eigene Position verändert. Sie berechnet die Distanz und Richtung und speichert diese dann direkt im Ziel-Objekt ab. Die zweite Methode wird aufgerufen, wenn sich die eigenen Richtung verändert, sie berechnet und liefert die neue Signalstärke direkt an den Aufrufer zurück. 
 % subsection datenmanagement (end)
 
-\subsection{Mini-Kompass} % (fold)
-\label{sub:mini_kompass}
-
-% subsection mini_kompass (end)
-
 \subsection{Design} % (fold)
 \label{sub:design}
-
+Die dieser Arbeit vorliegende Applikation (siehe Screenshots) ist nicht mit Design ausgestattet. Zu oberst werden die eigene Längen- und Höhenbreite angezeigt. Darunter die eigene Richtung in Abweichung von Nord. 
+Im unteren Teil der Applikation befindet sich eine Liste der Ziele, welche grün eingefärbt die Signalstärke für jedes Ziel anzeigt. Das Design soll in naher Zukunft angepasst werden, damit die Applikation ansprechender wird.
 % subsection design (end)
+
+\subsection{Mini-Kompass} % (fold)
+\label{sub:mini_kompass}
+Wie im Kapitel Design~\ref{sub:design} beschrieben, ist das Design und Frontend noch nicht ausgereift. Zusätzlich zu den Signalstärken zu den einzelnen Zielen, soll ebenfalls ein kleiner Kompass auf dem Bildschirm angezeigt werden. Dieser ist in der jetzigen Lösung nur als Grad Zahl in Abweichung von Nord angegeben. Somit braucht es für das spielen der Fuchsjagd lediglich noch eine Karte, die in Papierform den Vorteil der Übersicht und der Beschreibarkeit hat.
+% subsection mini_kompass (end)
 
 % section entwicklung_frontend (end)
