@@ -40,4 +40,32 @@ Bei angehängtem Android Phone, können alle Aktivitäten im Eclipse angezeigt w
 % subsubsection probleme_mit_android (end)
 
 % subsection Android (end)
+
+\subsection{iPhone} % (fold)
+\label{sub:iPhone}
+iPhone Apps werden normalerweise in Xcode Programmiert. Phonegap gibt ein Xcode Projekt vor welches als Container für die eigentliche Applikation dient. Da man für die iPhone Entwicklung zwingend eine Apple Developer Lizenz benötigt, und damit die erstellten Applikationen signieren muss, kommt keine andere IDE in Frage. Die Projektansicht von Xcode ist auf Abbildung \ref{fig:xcode-project} zu sehen.
+
+\begin{figure}[H]
+	\centering			      
+        \includegraphics[width=14cm]{images/xcode-project.png}\\
+		\caption{Entwicklungsumgebung Xcode}
+	\label{fig:xcode-project}
+\end{figure}
+
+\subsubsection{Deployment auf ein iPhone} % (fold)
+\label{ssub:Deployment auf ein iPhone}
+Um eine eigen erstellte Applikation auf einem iPhone zu installieren, muss zuerst das iPhone zur Developer Lizenz hinzugefügt werden. Danach kann man über das Provisioning Portal von Xcode das iPhone zum aktuellen Projekt hinzufügen. Erst jetzt kann die Applikation mit den entsprechenden Signaturen kompilieret werden. Dieser Vorgang ist vor allem für Einsteiger ziemlich verwirrend und es lohnt sich hier eine gute Anleitung oder Hilfe eines erfahrenen Entwicklers zu holen.
+% subsubsection Deployment auf ein iPhone (end)
+
+\subsubsection{iPhone Emulator} % (fold)
+\label{ssub:iPhone Emulator}
+Das Ausprobieren der eigenen App auf einem Emulator ist mit Xcode ziemlich einfach. Man kann die iOS Version und den Gerätetyp über ein Menü auswählen, danach startet der Emulator und man kann die App Testen. Jedoch werden die Geolocation Services dann vom Entwicklungssystem übernommen, was dazu führt, dass die Ortung mittels WLAN Ortung funktioniert und dadurch sehr ungenau ist. Da Fuchsjagd stark auf Veränderungen der Geolocation angewiesen ist, kann die Kernfunktion nicht mit dem Emulator getestet werden.
+% subsubsection iPhone Emulator (end)
+
+\subsubsection{Debuggen von iPhone Apps} % (fold)
+\label{ssub: Debuggen}
+Der mitgelieferte Debugger welcher in Xcode enthalten ist, kann sowohl zusammen mit dem Emulator wie auch mit einem iPhone gebraucht werden und unterstützt viele nützliche Funktionen wie eine Messung des Speicherverbrauchs.
+% subsubsection  Debuggen (end)
+
+% subsection iPhone (end)
 % section PhoneGap (end)
