@@ -8,3 +8,5 @@
 *.lof
 *.ilg
 *.ind
+*.bbl
+*.blg
