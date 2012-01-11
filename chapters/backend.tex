@@ -6,7 +6,7 @@
 
 \subsection{Einleitung} % (fold)
 \label{sub:Einleitung}
-Um einen OL einfach durch einen neuen zu ersetzen, wird ein zentraler Webserver verwendet. Das sogenannte Backend vereinfacht die Erstellung von OL indem es ermöglicht solche über ein Webformular einzutragen.
+Um einen OL einfach durch einen neuen zu ersetzen, wird ein zentraler Webserver verwendet. Das sogenannte Backend vereinfacht die Erstellung von OL's indem es ermöglicht solche über ein Webformular einzutragen.
 % subsection Einleitung (end)
 
 \subsection{Technologie} % (fold)
@@ -17,12 +17,12 @@ Django ist ein weit verbreitetes Webframework, welches sich zusammen mit Piston 
 
 \subsection{Hosting Evaluation} % (fold)
 \label{sub:Hosting Evaluation}
-Da Django Applikationen nicht auf jedem Webserver ohne weiteres lauffähig sind, und ein kostenarmer Betrieb auch nach dem Abschliessen dieser Arbeit erzielt werden soll, wurden hier die Bestehenden Applikations Hosting Services ins Auge gefasst.
+Da Django Applikationen nicht auf jedem Webserver ohne weiteres lauffähig sind, und ein kostenarmer Betrieb auch nach dem Abschliessen dieser Arbeit erzielt werden soll, wurden hier die bestehenden Applikations Hosting Services ins Auge gefasst.
 
 \subsubsection{Google App Engine} % (fold)
 \label{ssub:Google App Engine}
-Google betreibt mit der App Engine einen Dienst welche sehr gut Skalierbar ist und für kleine Datenaufkommen auch gratis ist.\\
-Jedoch unterstützte die App Engine zu Beginn dieser Arbeit noch keine Relationale Datenbank, was den Programmieraufwand beträchtlich erhöht hätte.
+Google betreibt mit der App Engine einen Dienst welcher sehr gut Skalierbar ist und für kleine Datenaufkommen auch gratis ist.\\
+Jedoch unterstützte die App Engine zu Beginn dieser Arbeit noch keine relationale Datenbanken, was den Programmieraufwand beträchtlich erhöht hätte.
 % subsubsection Google App Engnine (end)
 
 \subsubsection{Heroku} % (fold)
@@ -44,12 +44,12 @@ ep.io ist seit langer Zeit in der Beta Phase und ist nur mit einer persönlichen
 
 \subsection{Hosting Entscheidung} % (fold)
 \label{sub:Hosting Entscheidung}
-Da Marc Egli nach über einem halben Jahr Wartezeit noch rechtzeitig als Testbenutzer von ep.io zugelassen wurde und ep.io für unsere Zwecke gratis ist, haben wir uns dafür entschieden ep.io zu auszuprobieren.
+Da Marc Egli nach über einem halben Jahr Wartezeit noch rechtzeitig als Testbenutzer von ep.io zugelassen wurde und ep.io für unsere Zwecke gratis ist, haben wir uns dafür entschieden ep.io auszuprobieren.
 % subsection Hosting Entscheidung (end)
 
 \subsection{Bedienung} % (fold)
 \label{sub:Bedienung}
-Da es sich hier um einen Prototypen handelt wurde das Backend gezielt einfach gehalten. Mittels Passwort kann man sich im System anmelden (Abbildung~\ref{fig:admin-login}) um darin Änderungen vorzunehmen. Danach landet man automatisch in der Übersicht (Abbildung~\ref{fig:admin-index}), von hier aus können diverse Arbeiten erledigt werden. Unter den Menupunkten "`Users"' und "`Groups"' können weitere Benutzer hinzugefügt werden oder bestehenden Benutzern Rechte erteilt und wieder entzogen werden.
+Da es sich hier um einen Prototypen handelt wurde das Backend gezielt einfach gehalten. Mittels Passwort kann man sich im System anmelden (Abbildung~\ref{fig:admin-login}) um darin Änderungen vorzunehmen. Danach landet man automatisch in der Übersicht (Abbildung~\ref{fig:admin-index}), von hier aus können diverse Arbeiten erledigt werden. Unter den Menüpunkten "`Users"' und "`Groups"' können weitere Benutzer hinzugefügt werden oder bestehenden Benutzern Rechte erteilt und wieder entzogen werden.
 
 \begin{figure}[H]
 	\centering			      
@@ -65,7 +65,7 @@ Da es sich hier um einen Prototypen handelt wurde das Backend gezielt einfach ge
 	\label{fig:admin-index}
 \end{figure}
 
-Unter dem Menupunkt "`Sender Gruppen"' werden die Fuchsjagd Sender in Gruppen organisiert erfasst. Durch einen Klick auf den Menupunkt gelangt man in die Sendergruppen Übersicht (Abbildung~\ref{fig:group-index}). Hier können bestehende Gruppen durch anklicken geöffnet und editiert werden und über den "`Add Sender Gruppe"' Button können neue Gruppen erfasst werden.
+Unter dem Menüpunkt "`Sender Gruppen"' werden die Fuchsjagd Sender in Gruppen organisiert erfasst. Durch einen Klick auf den Menüpunkt gelangt man in die Sendergruppen Übersicht (Abbildung~\ref{fig:group-index}). Hier können bestehende Gruppen durch anklicken geöffnet und editiert werden und über den "`Add Sender Gruppe"' Button können neue Gruppen erfasst werden.
 
 \begin{figure}[H]
 	\centering			      
