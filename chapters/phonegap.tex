@@ -3,7 +3,7 @@
 \newpage
 \section{PhoneGap} % (fold)
 \label{sec:PhoneGap}
-PhoneGap bietet eine Applikationsplatform auf HTML 5 und CSS 3 Basis. Der Vorteil ist, das die nativen APIs mittels HTML und JavaScript implementiert werden können und dann je nach darunterliegendem Gerät angesprochen werden. Dadurch ist die Codebase der Applikation für alle Geräte die gleiche. Sie wird dann noch in eine standardmässige, geräte- und versionsspezifische Umgebung eingehängt und so auf den Smartphones installiert.
+PhoneGap bietet eine ApplikationsPlattform auf HTML 5 und CSS 3 Basis. Der Vorteil ist, das die nativen APIs mittels HTML und JavaScript implementiert werden können und dann je nach darunterliegendem Gerät angesprochen werden. Dadurch ist die Codebase der Applikation für alle Geräte die gleiche. Sie wird dann noch in eine standardmässige, geräte- und versionsspezifische Umgebung eingehängt und so auf den Smartphones installiert.
 
 \subsection{Android} % (fold)
 \label{sub:android}
@@ -33,17 +33,17 @@ Der Zugriff von Eclipse oder anderen IDEs auf ein Android Phone ist sehr einfach
 
 \subsubsection{Android Emulatoren} % (fold)
 \label{ssub:Android Emulatoren}
-Die Emulatoren, welche das Android SDK zu Verfügung stellt sind für einfache "`Hello World"' Appliktionen mehr als passable. Die Geschwindigkeit lässt jedoch schon beim Aufstarten von einem MacBook zu wünschen übrig. Der Angezeigte Android Desktop ruckelt und es dauert lange bis Klicks beantwortet werden. Wenn Andoid Native Features wie Geolocation oder der Kompass angesprochen werden sollen, muss dies zuerst kompliziert konfiugriert werden, wie es vielen Foren im Internet zu entnehmen ist. HTML5 und JavaScript funktionieren. Somit können die Emulatoren für einfache Regression Tests nützlich sein. Bei komplexeren Applikationen sollte man für das Programmieren jedoch ein richtiges Android Phone zur Verfügung haben wo man die Tests schnell und einfach darauf deployen und testen kann.
+Die Emulatoren, welche das Android SDK zu Verfügung stellt sind für einfache "`Hello World"' Appliktionen mehr als passable. Die Geschwindigkeit lässt jedoch schon beim Aufstarten von einem MacBook zu wünschen übrig. Der Angezeigte Android Desktop ruckelt und es dauert lange bis Klicks beantwortet werden. Wenn Android Native Features wie Geolocation oder der Kompass angesprochen werden sollen, muss dies zuerst kompliziert konfiugriert werden, wie es vielen Foren im Internet zu entnehmen ist. HTML5 und JavaScript funktionieren. Somit können die Emulatoren für einfache Regression Tests nützlich sein. Bei komplexeren Applikationen sollte man für das Programmieren jedoch ein richtiges Android Phone zur Verfügung haben wo man die Tests schnell und einfach darauf deployen und testen kann.
 % subsubsection Android Emulatoren (end)
 
 \subsubsection{Debuggen mit Eclipse} % (fold)
 \label{ssub:Debuggen mit Eclipse}
-Bei angehängtem Android Phone, können alle Aktivitäten im Eclipse angezeigt werden. Java Code könnte auch genau gedebugged werden. Leider können HTML und Java Script nicht gedebugged werden. Die Debug-View zeigt jedoch die Fehler wie einem Browser jedoch in chronologischem Ablauf zusammen mit den Warnings und Infos vom Phone (Klicks, Laden, etc). Somit kann dies dennoch hilfreich sein. 
+Bei angehängtem Android Phone, können alle Aktivitäten im Eclipse angezeigt werden. Java Code könnte auch genau gedebugged werden. Leider können HTML und Java Script nicht gedebugged werden. Die Debug-View zeigt die Fehler wie auf einem Browser in chronologischem Ablauf zusammen mit den Warnings und Infos vom Phone (Klicks, Laden, etc). Somit kann dies dennoch hilfreich sein. 
 % subsubsection Debuggen mit Eclipse (end)
 
 \subsubsection{Probleme mit Android} % (fold)
 \label{ssub:probleme_mit_android}
-Initial hat der Setup eines einfachen PhoneGap "`Hello World"' Beispiels Schwierigkeiten bereiten, da es mit einer alternativen IDE versucht wurde. Für PhoneGap gibt es jedoch "`Getting-Started"'-Dokumentation nur mit Eclipse. Diese ist für jemanden, der noch nie mit Android SDK oder PhoneGap programmiert hat essentiell. \\
+Initial hat das Setup eines einfachen PhoneGap "`Hello World"' Beispiels Schwierigkeiten bereitet, da es mit einer alternativen IDE versucht wurde. Für PhoneGap gibt es jedoch "`Getting-Started"'-Dokumentation nur mit Eclipse. Diese ist für jemanden, der noch nie mit Android SDK oder PhoneGap programmiert hat essentiell. \\
 Weiter wurden die nativen Features Geolocation und vorallem Kompass lange einfach nicht angezeigt ohne eine Fehlermeldung zu liefern. Nach diversen "`Try and Error"' Versuchen mit Neuaufsetzten des Eclipse Android Projektes und sauberem Konfigurieren der eigentlich simplen Setup Schritten sind die Features dann gelaufen. 
 % subsubsection Probleme mit Android (end)
 
@@ -51,7 +51,7 @@ Weiter wurden die nativen Features Geolocation und vorallem Kompass lange einfac
 
 \subsection{iPhone} % (fold)
 \label{sub:iPhone}
-iPhone Apps werden normalerweise in Xcode Programmiert. Phonegap gibt ein Xcode Projekt vor welches als Container für die eigentliche Applikation dient. Da man für die iPhone Entwicklung zwingend eine Apple Developer Lizenz benötigt, und damit die erstellten Applikationen signieren muss, kommt keine andere IDE in Frage. Die Projektansicht von Xcode ist auf Abbildung \ref{fig:xcode-project} zu sehen.
+iPhone Apps werden normalerweise in Xcode programmiert. PhoneGap gibt ein Xcode Projekt vor welches als Container für die eigentliche Applikation dient. Da man für die iPhone Entwicklung zwingend eine Apple Developer Lizenz benötigt, und damit die erstellten Applikationen signieren muss, kommt keine andere IDE in Frage. Die Projektansicht von Xcode ist auf Abbildung \ref{fig:xcode-project} zu sehen.
 
 \begin{figure}[H]
 	\centering			      

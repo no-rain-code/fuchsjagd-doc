@@ -8,21 +8,21 @@
 \label{sub:Vorbereitung}
 \subsubsection{Marktanalyse} % (fold)
 \label{ssub:Marktanalyse}
-Zur Zeit ist in der Schweiz das iPhone das meist verkaufte Smartphone. Dies und der App Store von Apple sind Gründe, weswegen viele Unternehmen ihre Mobileapplikationen erst für das iPhone entwickeln. Zur Zeit wächst jedoch der Android Markt sehr schnell und wird das iPhone wahrscheinlich vom ersten Platz verdrängen. Das Entwickeln einer App für Android ist jedoch in einigen Punkten komplexer als es für das iPhone ist, da die Diversität der Geräte massiv höher ist und kaum ein Gerät auf einen Relevanten Marktanteil kommt. Daher ist es zur Zeit sinnvoll eine iPhone Anwendung für mehrere Geräteklassen zu entwickeln.
+Zur Zeit ist in der Schweiz das iPhone das meist verkaufte Smartphone. Dies und der App Store von Apple sind Gründe, weswegen viele Unternehmen ihre Mobilapplikationen erst für das iPhone entwickeln. Zur Zeit wächst jedoch der Android Markt sehr schnell und wird das iPhone wahrscheinlich vom ersten Platz verdrängen. Das Entwickeln einer App für Android ist jedoch in einigen Punkten komplexer als es für das iPhone ist, da die der Geräte massiv höher ist und kaum ein Gerät auf einen relevanten Marktanteil kommt. Daher ist es zur Zeit sinnvoll eine iPhone Anwendung für mehrere Geräteklassen zu entwickeln.
 % subsubsection Marktanalyse (end)
 
 \subsubsection{Plattformevaluation} % (fold)
 \label{ssub:Plattformevaluation}
-Da die Verfasser dieser Arbeit iOS und Android Geräte verwenden, wurde auf ein Crossplatform Framework gesetzt. Zum Zeitpunkt dieser Evaluation gab es zwei mögliche Wege, plattformunabhängige Applikationen zu erstellen.
+Da die Verfasser dieser Arbeit iOS und Android Geräte verwenden, wurde auf ein "`Crossplatform Framework"' gesetzt. Zum Zeitpunkt dieser Evaluation gab es zwei mögliche Wege plattformunabhängige Applikationen zu erstellen.
 \begin{itemize}
     \item Adobe Flex
-    \item Phonegap
+    \item PhoneGap
 \end{itemize}
-Da Phonegap bessere Unterstützung für exotische Plattformen hatte und es mit JavaScript auf einer Programmiersprache beruht welche auch im World Wide Web eingesetzt wird und Adobe Flex mit ActionScript3 auf eine Sprache setzt welche ausser in Adobe Produkten nicht eingesetzt wird, fiel die Entscheidung auf Phonegap
+Da PhoneGap bessere Unterstützung für exotische Plattformen hatte und es mit JavaScript auf einer Programmiersprache beruht, welche auch im World Wide Web eingesetzt wird und Adobe Flex mit ActionScript3 auf eine Sprache setzt, welche ausser in Adobe Produkten nicht eingesetzt wird, fiel die Entscheidung auf PhoneGap.
 % subsubsection Plattformevaluation (end)
 % subsection Vorbereitung (end)
 
-\subsection{Geolocation Navtive Feature} % (fold)
+\subsection{Geolocation Native Feature} % (fold)
 \label{sub:geolocation_native_feature}
 Von Geolocation Native Funktion werden zwei PhoneGap Methoden verwendet. Initial wird getCurrentPosition verwendet um die aktuelle Position festzustellen. Danach werden mit watchPostion Veränderungen festgestellt und abgespeichert. Die Ankunft von neuen Geolocation Daten löst immer direkt eine Berechnung der Abstände und Richtungen zu den Zielen aus. Der Wert den die Methoden zurückliefern ist die Gradangabe unterschiedlich von Nord. Daher ist Ost 90, Süd 180 und West 270.
 % subsection geolocation_native_feature (end)
@@ -41,12 +41,12 @@ Die Richtung wird mittels dem Öffnungswinkel zwischen den zwei Punkten berechne
 % subsubsection richtung (end)
 \subsubsection{Signalstärke} % (fold)
 \label{ssub:signalstärke}
-Die Signalstärke wird angezeigt, wenn die eigene Richtung näher wie 100 Grad an der Richtung des Ziels ist. In einer ersten Implementation wurde die Stärke linear berechnet. Daher: Wenn die Richtung um 99 Grad daneben war wurde 1\% Signalstärke angezeigt, bei 50 Grad waren es 50\% Signalstärke. Ein einem zweiten Schritt wurde die Signalstärke dann exponentiell berechnet. Daher: Bei kleiner Richtungsänderung in der nähe der perfekten Ausrichtung verändert sich die Signalstärke sehr stark, bei grösseren Richtungsänderungen im Bereich von 100 Grad Abweichung des Ziels verändert sich die Signalstärke nur schwach. Dieses Verhalten ist auch bei der Richtfunk-Fuchsjagd der Fall. Die Grösse mit den 100 Grad Abweichung kann mit einer guten Richtfunk Anlage ebenfalls bewerkstelligt werden. Schlechtere Anlagen haben einen grösseren Radius wo das Signal angezeigt wird und somit wird in allen Richtungen ein stärkeres oder schwächeres Signal festgestellt.
+Die Signalstärke wird angezeigt, wenn die eigene Richtung näher als 100 Grad an der Richtung des Ziels ist. In einer ersten Implementation wurde die Stärke linear berechnet. Daher: Wenn die Richtung um 99 Grad daneben war wurde 1\% Signalstärke angezeigt, bei 50 Grad waren es 50\% Signalstärke. In einem zweiten Schritt wurde die Signalstärke dann exponentiell berechnet. Daher: Bei kleiner Richtungsänderung in der nähe der perfekten Ausrichtung verändert sich die Signalstärke sehr stark, bei grösseren Richtungsänderungen im Bereich von 100 Grad Abweichung des Ziels verändert sich die Signalstärke nur schwach. Dieses Verhalten ist auch bei der Richtfunk-Fuchsjagd der Fall. Die Grösse mit den 100 Grad Abweichung kann mit einer guten Richtfunk Anlage ebenfalls bewerkstelligt werden. Schlechtere Anlagen haben einen grösseren Radius wo das Signal angezeigt wird und somit wird in allen Richtungen ein stärkeres oder schwächeres Signal festgestellt.
 % subsubsection signalstärke (end)
-\subsubsection{Distantz} % (fold)
-\label{ssub:distantz}
+\subsubsection{Distanz} % (fold)
+\label{ssub:distanz}
 Die Distanz wird mit einer Hypotenuse zwischen den beiden Punkten (Eigene Position und Ziel) mit den Deltas der Längen- und Höhenbreite berechnet. 
-% subsubsection distantz (end)
+% subsubsection distanz (end)
 % subsection kalkulation (end)
 
 \subsection{Backend Kommunikation} % (fold)
@@ -56,12 +56,12 @@ Die Backend Kommunikation wurde längere Zeit mit statischen Zielen simuliert. S
 
 \subsection{Stärkenanzeige} % (fold)
 \label{sub:stärkenanzeige}
-Für die Anzeige der Signalstärke für x Ziele wurde dynamisches HTML verwendet, was grundsätzlich keine schöne Lösung ist. Dabei werden mittels Java Script HTML Tags nach dem Laden für jedes gefundene Ziel ein HTML-Div in einen schon vorhandenen div eingebunden. Dabei erhält jeder der Divs eine individuelle dem Ziel angepasste ID damit die Signalstärke bei Änderungen angepasst werden können. Die Signalstärke wird von der Kalkulation in Prozent geliefert. Diese Prozentzahl kann dann direkt im HTML Signalstärke Tag width eingegeben werden, das die prozentuale Grösse vom darum liegenden Tag annimmt.
+Für die Anzeige der Signalstärke für x Ziele wurde dynamisches HTML verwendet, was grundsätzlich keine schöne Lösung ist. Dabei werden mittels Java Script HTML Tags nach dem Laden für jedes gefundene Ziel ein HTML-Div in einen schon vorhandenen div eingebunden. Dabei erhält jeder der Divs eine individuelle dem Ziel angepasste ID damit die Signalstärke bei Änderungen angepasst werden kann. Die Signalstärke wird von der Kalkulation in Prozent geliefert. Diese Prozentzahl kann dann direkt im HTML Signalstärke Tag width eingegeben werden, das die prozentuale Grösse vom darum liegenden Tag annimmt.
 % subsection stärkenanzeige (end)
 
 \subsection{Datenmanagement} % (fold)
 \label{sub:datenmanagement}
-Um die Daten der Ziele zu managen, wurde Objekt Orientiertes Java Script verwendet. Ein Ziel besitzt einen Namen, eine fixe Position, welche vom Backend geliefert wird, eine veränderliche Richtung und Entfernung. Zusätzlich besitzt das Objekt zwei Methoden. Die erste wird aufgerufen, wenn sich die eigene Position verändert. Sie berechnet die Distanz und Richtung und speichert diese dann direkt im Ziel-Objekt ab. Die zweite Methode wird aufgerufen, wenn sich die eigenen Richtung verändert, sie berechnet und liefert die neue Signalstärke direkt an den Aufrufer zurück. 
+Um die Daten der Ziele zu managen, wurde Objekt Orientiertes Java Script verwendet. Ein Ziel besitzt einen Namen, eine fixe Position, welche vom Backend geliefert wird, eine veränderliche Richtung und Entfernung. Zusätzlich besitzt das Objekt zwei Methoden. Die erste wird aufgerufen, wenn sich die eigene Position verändert. Sie berechnet die Distanz und Richtung und speichert diese dann direkt im Ziel-Objekt ab. Die zweite Methode wird aufgerufen, wenn sich die eigene Richtung verändert. Sie berechnet und liefert die neue Signalstärke direkt an den Aufrufer zurück. 
 % subsection datenmanagement (end)
 
 \subsection{Design} % (fold)
